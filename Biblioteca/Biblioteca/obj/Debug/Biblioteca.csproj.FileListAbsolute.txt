@@ -1,0 +1,12 @@
+D:\Programare\Biblioteca\Biblioteca\bin\Debug\Biblioteca.exe.config
+D:\Programare\Biblioteca\Biblioteca\bin\Debug\Biblioteca.exe
+D:\Programare\Biblioteca\Biblioteca\bin\Debug\Biblioteca.pdb
+D:\Programare\Biblioteca\Biblioteca\obj\Debug\Biblioteca.csproj.AssemblyReference.cache
+D:\Programare\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Form1.resources
+D:\Programare\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Properties.Resources.resources
+D:\Programare\Biblioteca\Biblioteca\obj\Debug\Biblioteca.csproj.GenerateResource.cache
+D:\Programare\Biblioteca\Biblioteca\obj\Debug\Biblioteca.csproj.CoreCompileInputs.cache
+D:\Programare\Biblioteca\Biblioteca\obj\Debug\Biblioteca.exe
+D:\Programare\Biblioteca\Biblioteca\obj\Debug\Biblioteca.pdb
+D:\Programare\Biblioteca\Biblioteca\obj\Debug\Biblioteca.CreateUpdateForm.resources
+D:\Programare\Biblioteca\Biblioteca\obj\Debug\Biblioteca.ListareForm.resources
