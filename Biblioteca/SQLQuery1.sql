@@ -7,8 +7,7 @@ CREATE TABLE Edituri (
 -- Tabela Autori  
 CREATE TABLE Autori (
     Id INT PRIMARY KEY IDENTITY(1,1),
-    Nume NVARCHAR(100) NOT NULL UNIQUE,
-    Nationalitate NVARCHAR(50)
+    Nume NVARCHAR(100) NOT NULL UNIQUE
 )
 
 -- Tabela Carti (modificată)
@@ -51,33 +50,33 @@ INSERT INTO Edituri (Nume) VALUES
 ('RAO'),
 ('Litera');
 
-INSERT INTO Autori (Nume, Nationalitate) VALUES
-('Mircea Eliade', 'Română'),
-('Emil Cioran', 'Română'),
-('Mircea Cărtărescu', 'Română'),
-('George Orwell', 'Engleză'),
-('Ernest Hemingway', 'Americană'),
-('Liviu Rebreanu', 'Română'),
-('Ion Luca Caragiale', 'Română'),
-('Lev Tolstoi', 'Rusă'),
-('Fyodor Dostoievski', 'Rusă');
+INSERT INTO Autori (Nume) VALUES
+('Mircea Eliade'),
+('Emil Cioran'),
+('Mircea Cărtărescu'),
+('George Orwell'),
+('Ernest Hemingway'),
+('Liviu Rebreanu'),
+('Ion Luca Caragiale'),
+('Lev Tolstoi'),
+('Fyodor Dostoievski');
 
 INSERT INTO Carti (Titlu, AnPublicare, Descriere, EdituraId) VALUES
-('Maitreyi', 1933, 'Roman de dragoste indian scris de Mircea Eliade', 1),
-('Pe culmile disperării', 1934, 'Lucrare filosofică a lui Emil Cioran', 2),
-('Orbitor', 1996, 'Trilogie modernistă de Mircea Cărtărescu', 3),
-('1984', 1949, 'Roman distopic emblematic al lui George Orwell', 4),
-('Bătrânul și marea', 1952, 'Roman despre pescuit de Ernest Hemingway', 5),
-('Ion', 1920, 'Roman țărănesc al lui Liviu Rebreanu', 1),
-('Enigma Otiliei', 1938, 'Roman social-psihologic de George Călinescu', 2),
-('O scrisoare pierdută', 1884, 'Comedie satirică de Ion Luca Caragiale', 3),
-('Război și pace', 1869, 'Roman istoric epic de Lev Tolstoi', 4),
-('Crimă și pedeapsă', 1866, 'Roman psihologic de Fyodor Dostoievski', 5),
-('Amintiri din copilărie', 1884, 'Operă autobiografică de Ion Creangă', 1),
-('Moara cu noroc', 1881, 'Nuvelă psihologică de Ioan Slavici', 2),
-('Frații Karamazov', 1880, 'Roman filosofic de Fyodor Dostoievski', 3),
-('Anna Karenina', 1877, 'Roman de dragoste de Lev Tolstoi', 4),
-('Animal Farm', 1945, 'Satiră politică de George Orwell', 5);
+('Maitreyi', 1933, 'Roman de dragoste indian', 1),
+('Pe culmile disperării', 1934, 'Lucrare filosofică', 2),
+('Orbitor', 1996, 'Trilogie modernistă', 3),
+('1984', 1949, 'Roman distopic emblematic', 4),
+('Bătrânul și marea', 1952, 'Roman despre pescuit', 5),
+('Ion', 1920, 'Roman țărănesc', 1),
+('Enigma Otiliei', 1938, 'Roman social-psihologic', 2),
+('O scrisoare pierdută', 1884, 'Comedie satirică', 3),
+('Război și pace', 1869, 'Roman istoric epic', 4),
+('Crimă și pedeapsă', 1866, 'Roman psihologic', 5),
+('Amintiri din copilărie', 1884, 'Operă autobiografică', 1),
+('Moara cu noroc', 1881, 'Nuvelă psihologică', 2),
+('Frații Karamazov', 1880, 'Roman filosofic', 3),
+('Anna Karenina', 1877, 'Roman de dragoste', 4),
+('Animal Farm', 1945, 'Satiră politică', 5);
 
 INSERT INTO CartiAutori (CarteId, AutorId) VALUES
 (100000, 1),   -- Maitreyi - Mircea Eliade
@@ -103,3 +102,10 @@ INNER JOIN Edituri e ON c.EdituraId = e.Id
 INNER JOIN CartiAutori ca ON c.Id = ca.CarteId
 INNER JOIN Autori a ON ca.AutorId = a.Id
 ORDER BY c.Titlu
+
+SELECT * FROM Carti
+
+DROP TABLE Autori 
+SELECT HAS_PERMS_BY_NAME('Biblioteca.dbo.Carti', 'OBJECT', 'DELETE');
+USE BibliotecaDB;
+GO

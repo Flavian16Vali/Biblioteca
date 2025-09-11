@@ -46,35 +46,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreateUpdateForm.cs">
+    <Compile Include="Bussiness\CarteService.cs" />
+    <Compile Include="Data Set\Book.cs" />
+    <Compile Include="Data\BookRepository.cs" />
+    <Compile Include="User Interface\CreateUpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateUpdateForm.Designer.cs">
+    <Compile Include="User Interface\CreateUpdateForm.Designer.cs">
       <DependentUpon>CreateUpdateForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataSet\CarteDataSet.cs" />
-    <Compile Include="Data\Carte.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="User Interface\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="User Interface\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListareForm.cs">
+    <Compile Include="User Interface\ListareForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListareForm.Designer.cs">
+    <Compile Include="User Interface\ListareForm.Designer.cs">
       <DependentUpon>ListareForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CreateUpdateForm.resx">
+    <EmbeddedResource Include="User Interface\CreateUpdateForm.resx">
       <DependentUpon>CreateUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="User Interface\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListareForm.resx">
+    <EmbeddedResource Include="User Interface\ListareForm.resx">
       <DependentUpon>ListareForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
