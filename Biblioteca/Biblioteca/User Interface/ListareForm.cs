@@ -128,7 +128,7 @@ namespace Biblioteca
 
                 tableCartiFiltrate.DataSource = result;
 
-                // MessageBox.Show($"S-au gasit {result.Rows.Count} carti conform filtrelor.");
+                MessageBox.Show($"S-au gasit {result.Rows.Count} carti conform filtrelor.");
 
             }
             catch (Exception ex)

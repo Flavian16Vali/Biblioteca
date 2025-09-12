@@ -94,7 +94,7 @@ namespace Biblioteca.Data
             return table;
         }
 
-        public Book GetBook(int id)
+        public Book GetBookById(int id)
         {   
             try
             {
@@ -125,8 +125,21 @@ namespace Biblioteca.Data
                     
                     if (book != null)
                     {
-                        book.AuthorIds = new List<int>();
-                        book.AuthorNames = GetBookAuthors(connection, id);
+                        string authorsSql = @"SELECT a.Id FROM Autori a INNER JOIN CartiAutori ca ON a.Id = ca.AutorId WHERE ca.CarteId = @CarteId";
+                                 
+                        using (SqlCommand authorsCommand = new SqlCommand(authorsSql, connection))
+                        {
+                            authorsCommand.Parameters.AddWithValue("@CarteId", id);
+                
+                            using (SqlDataReader authorsReader = authorsCommand.ExecuteReader())
+                            {
+                                while (authorsReader.Read())
+                                {
+                                    int authorId = authorsReader.GetInt32(authorsReader.GetOrdinal("Id"));
+                                    book.AuthorIds.Add(authorId);
+                                }
+                            }
+                        }
                     }
                     return book;
                                

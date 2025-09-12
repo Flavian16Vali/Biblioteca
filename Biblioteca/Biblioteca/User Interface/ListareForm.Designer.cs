@@ -142,7 +142,7 @@ namespace Biblioteca
             // btnStergeFiltre
             // 
             this.btnStergeFiltre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnStergeFiltre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStergeFiltre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStergeFiltre.ForeColor = System.Drawing.Color.Black;
             this.btnStergeFiltre.Location = new System.Drawing.Point(729, 37);
             this.btnStergeFiltre.Name = "btnStergeFiltre";

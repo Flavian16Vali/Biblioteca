@@ -96,7 +96,7 @@ namespace Biblioteca.Bussiness
             if (id <= 0)
                 throw new ArgumentException("ID invalid.");
 
-            return repository.GetBook(id);
+            return repository.GetBookById(id);
         }
 
 
